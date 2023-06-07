@@ -3,13 +3,12 @@
   align-items: center;
   text-align: center;
   width: 20rem;
-  height: 30rem;
   margin: 2rem;
   color: black;
   p {
     font-size: 1.5rem;
   }
-  img {
+  .pkm-img {
     background-color: #525252;
     border-radius: 9px;
     /* width: 84%; */
@@ -21,4 +20,32 @@
 }
 .card:hover {
   transform: scale(1.1);
+}
+.pkmn-id {
+  text-align: left;
+}
+.upper-card {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  p {
+    padding: 1rem;
+  }
+}
+.type-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  img {
+    width: 3rem;
+  }
 }

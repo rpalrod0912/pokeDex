@@ -1,6 +1,26 @@
 <mat-card class="card">
   <mat-card-content>
-    <img [src]="card.sprites.other['official-artwork'].front_default" />
-    <p>{{ card.name | uppercase }}</p>
+    <div class="upper-card">
+      <p>{{ card.name | uppercase }}</p>
+
+      <p class="pkmn-id">Nº {{ card.id }}</p>
+    </div>
+    <img
+      class="pkm-img"
+      [src]="card.sprites.other['official-artwork'].front_default"
+    />
+    <p>Tipos</p>
+    <div class="bottom-card">
+      <div
+        [ngStyle]="{
+          'background-color': typeData.color,
+          'box-shadow': '0 0 20px' + typeData.color
+        }"
+        class="type-badge"
+        *ngFor="let typeData of pkmnType"
+      >
+        <img [src]="typeData.url" />
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>
