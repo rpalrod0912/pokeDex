@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lists-page',
@@ -11,7 +12,7 @@ export class ListsPageComponent implements OnInit {
   public isLoaded: boolean = false;
   public pokemonArr: any = [];
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private pokemonService: PokemonService, private router: Router) {}
   ngOnInit(): void {
     console.log(
       this.pokemonService.getPokemons().subscribe((data: any) => {

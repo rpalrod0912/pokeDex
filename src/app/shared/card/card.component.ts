@@ -5,6 +5,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-card',
@@ -14,7 +15,7 @@ import {
 export class CardComponent implements OnInit {
   public pkmnType: any = [];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     console.log(this.card);
@@ -107,5 +108,11 @@ export class CardComponent implements OnInit {
     }
     this.pkmnType.push(objetoData);
     console.log(this.pkmnType);
+  }
+
+  public navigate(id: string) {
+    debugger;
+    //this.router.navigate(['/pokemon/pokemonview'], { queryParams: { id } });
+    this.router.navigate(['/pokemon/pokemonview', id]);
   }
 }

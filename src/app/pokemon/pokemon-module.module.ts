@@ -7,9 +7,10 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PokemonService } from './services/pokemon.service';
+import { PokemonViewComponent } from './pages/pokemon-view/pokemon-view.component';
 
 @NgModule({
-  declarations: [ListsPageComponent, LayoutPageComponent],
+  declarations: [ListsPageComponent, LayoutPageComponent, PokemonViewComponent],
   imports: [
     CommonModule,
     RouterModule,

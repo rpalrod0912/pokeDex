@@ -1,4 +1,4 @@
-<mat-card class="card">
+<mat-card (click)="navigate(card.id)" class="card">
   <mat-card-content>
     <div class="upper-card">
       <p>{{ card.name | uppercase }}</p>
