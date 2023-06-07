@@ -1,0 +1,10 @@
+<shared-toolbar-header></shared-toolbar-header>
+<main>
+  <shared-load-spinner *ngIf="!isLoaded"></shared-load-spinner>
+  <div class="pkmCard" *ngIf="isLoaded">
+    <shared-card
+      *ngFor="let pkmnCard of pokemonArr"
+      [card]="pkmnCard"
+    ></shared-card>
+  </div>
+</main>

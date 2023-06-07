@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+@Component({
+  selector: 'shared-load-spinner',
+  templateUrl: './load-spinner.component.html',
+  styleUrls: ['./load-spinner.component.scss'],
+})
+export class LoadSpinnerComponent {}
