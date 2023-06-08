@@ -1,30 +1,46 @@
 .card {
+  padding: 1rem;
+  border-radius: 2rem;
   display: flex;
   align-items: center;
   text-align: center;
-  width: 20rem;
+  min-width: 20rem;
   margin: 2rem;
   color: black;
+  box-shadow: 0 0.5rem 1.25rem 0.1rem rgba(0, 0, 0, 0.5);
   p {
     font-size: 1.5rem;
   }
+  .card-content {
+    border-radius: 1.5rem;
+  }
   .pkm-img {
-    background-color: #525252;
     border-radius: 9px;
     /* width: 84%; */
     padding: 3rem;
     width: 11rem;
   }
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .card:hover {
   transform: scale(1.1);
   box-shadow: #525252;
+  min-width: 18rem;
+  padding: 0rem;
+}
+.pkmn-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  text-transform: capitalize;
 }
 
 .pkmn-id {
-  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  opacity: 0.5;
 }
 .upper-card {
   display: flex;

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-lists-page',
   templateUrl: './lists-page.component.html',
-  styleUrls: ['./lists-page.component.css'],
+  styleUrls: ['./lists-page.component.scss'],
 })
 export class ListsPageComponent implements OnInit {
   public isLoaded: boolean = false;

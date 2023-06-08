@@ -1,0 +1,45 @@
+<mat-tab-group>
+  <mat-tab label="First">
+    <div class="tab-flex">
+      <shared-card [card]="cardData"></shared-card>
+      <div class="general-info">
+        <p>{{ speciesData.genera[description].genus }}</p>
+        <section class="info-1">
+          <div class="text">
+            <h1>Altura</h1>
+            <p>{{ cardData.height }} Inches</p>
+          </div>
+          <div class="text">
+            <h1>Peso</h1>
+            <p>{{ cardData.weight }} lb</p>
+          </div>
+        </section>
+        <div class="text">
+          <h1>Experiencia base</h1>
+          <p>{{ cardData.base_experience }}</p>
+        </div>
+        <div class="abilities-row">
+          <h1>HABILIDADES</h1>
+          <div class="sub-row">
+            <div *ngFor="let ability of cardData.abilities">
+              <p>{{ ability.ability.name }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="abilities-row">
+          <h1>TIPOS</h1>
+          <div class="sub-row">
+            <div *ngFor="let type of cardData.types">
+              <p>{{ type.type.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Second">
+    Content 2
+    {{ description }}
+  </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>

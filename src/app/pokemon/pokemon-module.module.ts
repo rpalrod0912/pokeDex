@@ -8,9 +8,10 @@ import { PokemonRoutingModule } from './pokemon-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PokemonService } from './services/pokemon.service';
 import { PokemonViewComponent } from './pages/pokemon-view/pokemon-view.component';
+import { PokemonTabsComponent } from './components/pokemon-tabs/pokemon-tabs.component';
 
 @NgModule({
-  declarations: [ListsPageComponent, LayoutPageComponent, PokemonViewComponent],
+  declarations: [ListsPageComponent, LayoutPageComponent, PokemonViewComponent, PokemonTabsComponent],
   imports: [
     CommonModule,
     RouterModule,

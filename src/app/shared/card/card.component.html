@@ -1,15 +1,17 @@
 <mat-card (click)="navigate(card.id)" class="card">
-  <mat-card-content>
-    <div class="upper-card">
-      <p>{{ card.name | uppercase }}</p>
-
-      <p class="pkmn-id">Nº {{ card.id }}</p>
-    </div>
+  <mat-card-content
+    class="card-content"
+    [ngStyle]="{
+      background: 'linear-gradient(180deg,' + pkmnType[0].color + ',#fff 85%)'
+    }"
+  >
+    <p class="pkmn-id">Nº {{ card.id }}</p>
     <img
       class="pkm-img"
       [src]="card.sprites.other['official-artwork'].front_default"
     />
-    <p>Tipos</p>
+    <p class="pkmn-name">{{ card.name }}</p>
+
     <div class="bottom-card">
       <div
         [ngStyle]="{

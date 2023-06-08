@@ -1,0 +1,32 @@
+p,
+h1,
+h2,
+h3 {
+  color: black;
+}
+.tab-flex {
+  display: flex;
+  justify-content: space-evenly;
+  .general-info {
+    display: flex;
+    flex-direction: column;
+    .info-1 {
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        padding: 1rem;
+      }
+    }
+  }
+}
+.abilities-row {
+  display: flex;
+  flex-direction: column;
+  .sub-row {
+    display: flex;
+    flex-wrap: wrap;
+    div {
+      padding: 1rem;
+    }
+  }
+}
