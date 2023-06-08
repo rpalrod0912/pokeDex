@@ -9,11 +9,18 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   getPokemons(): Observable<[]> {
-    debugger;
     return this.http.get<[]>(`${this.baseUrl}pokemon?limit=151&offset=0`);
   }
   getPokemonData(url: string): Observable<[]> {
-    debugger;
     return this.http.get<[]>(`${url}`);
+  }
+
+  async getPokemonDataFetch(url: string) {
+    let response;
+    let data = await fetch(url).then((res) => {
+      response = res.json();
+    });
+    console.log(response);
+    return response;
   }
 }
